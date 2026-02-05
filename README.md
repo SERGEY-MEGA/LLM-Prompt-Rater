@@ -1,4 +1,3 @@
-# LLM-Prompt-Rater
 # 🤖 Оценка промптов для LLM: классификатор «Лайк/Дизлайк»
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
