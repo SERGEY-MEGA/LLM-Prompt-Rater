@@ -1,5 +1,6 @@
 # 🤖 Оценка промптов для LLM: классификатор «Лайк/Дизлайк»
 
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SERGEY-MEGA/LLM-Prompt-Rater/blob/main/prompt_classifier.ipynb)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SERGEY-MEGA/LLM-Prompt-Rater/blob/main/prompt_classifier.ipynb)
