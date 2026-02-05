@@ -36,11 +36,12 @@
 
 📁 Структура проекта
 
+
 LLM-Prompt-Rater/
-├── prompt_classifier.ipynb  # Основной ноутбук для Colab
-├── dataset.csv              # 78 размеченных промптов (0=дизлайк, 1=лайк)
-├── requirements.txt         # Зависимости
-└── LICENSE                  # Лицензия MIT
+├── prompt_classifier.ipynb   # Основной ноутбук для Colab
+├── dataset.csv               # 78 размеченных промптов (0=дизлайк, 1=лайк)
+├── requirements.txt          # Зависимости
+└── LICENSE                   # Лицензия MIT
 
 
 ## 📦 Установка зависимостей
