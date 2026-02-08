@@ -1,0 +1,32 @@
+[
+  {
+    "id": 101,
+    "topic": "Metrics",
+    "prompt": "У меня задача классификации с сильным дисбалансом классов (98% vs 2%). Почему Accuracy будет врать? Какую метрику лучше выбрать и почему (F1, ROC-AUC, PR-AUC)?",
+    "complexity": "hard"
+  },
+  {
+    "id": 102,
+    "topic": "Deep Learning",
+    "prompt": "Объясни механику 'Vanishing Gradient' (затухающего градиента) в глубоких сетях. Как Residual Connections (в ResNet) помогают решить эту проблему математически?",
+    "complexity": "hard"
+  },
+  {
+    "id": 103,
+    "topic": "Transformers",
+    "prompt": "В чем принципиальная разница между Encoder-only (BERT) и Decoder-only (GPT) архитектурами? Для каких задач лучше подходит каждая из них?",
+    "complexity": "medium"
+  },
+  {
+    "id": 104,
+    "topic": "Regularization",
+    "prompt": "Сравни L1 и L2 регуляризацию. Почему L1 приводит к разреженным векторам весов (feature selection), а L2 нет? Дай геометрическую интуицию.",
+    "complexity": "medium"
+  },
+  {
+    "id": 105,
+    "topic": "NLP",
+    "prompt": "Как работает механизм Tokenization (BPE - Byte Pair Encoding)? Приведи пример разбиения редкого слова на токены.",
+    "complexity": "easy"
+  }
+]
