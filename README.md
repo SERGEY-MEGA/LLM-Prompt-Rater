@@ -18,7 +18,7 @@
 
 ## 🚀 Демонстрация в Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SERGEY-MEGA/LLM-Prompt-Rater/blob/main/demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SERGEY-MEGA/LLM-Prompt-Rater/blob/main/prompt_classifier.ipynb)
 
 👉 **Кликни на кнопку выше** → откроется ноутбук в новом окне → нажми **Runtime → Run all**
 
