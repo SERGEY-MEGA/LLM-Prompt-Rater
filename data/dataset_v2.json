@@ -1,0 +1,25 @@
+import json
+import random
+
+# Загрузи старые данные
+with open('data/dataset.json', 'r', encoding='utf-8') as f:
+    old_data = json.load(f)
+
+# Добавь новые
+new_data = []
+
+# Хорошие (аугментированные)
+for p in augmented[:150]:
+    new_data.append({'prompt': p, 'label': 1})
+
+# Плохие (скачанные)
+for p in bad_prompts[:150]:
+    new_data.append({'prompt': p, 'label': 0})
+
+# Перемешай
+random.shuffle(new_data)
+
+with open('data/dataset_v2.json', 'w', encoding='utf-8') as f:
+    json.dump(new_data, f, ensure_ascii=False, indent=2)
+
+print(f"Финальный датасет: {len(new_data)} примеров ({sum(d['label'] for d in new_data)} лайков, {len(new_data)-sum(d['label'] for d in new_data)} дизлайков)")
