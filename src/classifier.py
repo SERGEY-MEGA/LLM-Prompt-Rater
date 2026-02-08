@@ -8,9 +8,9 @@ class PromptClassifier:
         self.classifier = LogisticRegression(
             random_state=42,
             max_iter=1000,
-            class_weight='balanced'  # боремся с дисбалансом
+            class_weight='balanced'
         )
-        self.threshold = 0.7
+        self.safety_threshold = 0.35  # 🔒 КОНСЕРВАТИВНЫЙ ПОРОГ
     
     def fit(self, prompts, labels):
         X = self.embedder.encode(prompts, show_progress_bar=True)
@@ -20,24 +20,9 @@ class PromptClassifier:
     def predict(self, prompts):
         if isinstance(prompts, str):
             prompts = [prompts]
-        probs = self.predict_proba(prompts)
-        preds = (probs[:, 1] >= self.threshold).astype(int)
-        confidence = np.max(probs, axis=1)
-        return preds, confidence, probs
-    
-    def predict_proba(self, prompts):
-        if isinstance(prompts, str):
-            prompts = [prompts]
         X = self.embedder.encode(prompts)
-        return self.classifier.predict_proba(X)
-    
-    def evaluate(self, prompts, labels):
-        preds, conf, _ = self.predict(prompts)
-        acc = np.mean(preds == labels)
-        high_conf_mask = conf >= self.threshold
-        high_conf_acc = np.mean(preds[high_conf_mask] == np.array(labels)[high_conf_mask])
-        return {
-            'accuracy': acc,
-            'high_confidence_accuracy': high_conf_acc,
-            'high_confidence_ratio': high_conf_mask.mean()
-        }
+        proba = self.classifier.predict_proba(X)
+        # 🔒 БЕЗОПАСНАЯ ЛОГИКА: если P(дизлайк) > 35% → блокируем
+        preds = np.where(proba[:, 0] > self.safety_threshold, 0, 1)
+        decisions = np.where(preds == 0, 'заблокировано', 'разрешено')
+        return preds, proba, decisions
