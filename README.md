@@ -19,7 +19,7 @@ cat > README.md << 'EOF'
 
 ## 🚀 Демонстрация в Google Colab (работает сразу!)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SERGEY-MEGA/LLM-Prompt-Rater/blob/main/prompt_classifier.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/SERGEY-MEGA/LLM-Prompt-Rater/blob/main/LLM_классификатор_«Лайк_Дизлайк».ipynb)
 
 👉 **Кликни на кнопку выше** → откроется ноутбук в новом окне → нажми **Runtime → Run all**
 
