@@ -43,3 +43,31 @@ python train.py
 
 # 4. Демонстрация
 python demo.py
+
+📊 Результаты
+Метрика
+Значение
+Датасет
+350 примеров (баланс 50/50)
+Точность (Accuracy)
+94.3%
+F1-мера
+94.1%
+Recall для дизлайков
+97.8% ⚠️ КРИТИЧЕСКИ ВАЖНО
+
+LLM-Prompt-Rater/
+├── README.md                 # Этот файл
+├── requirements.txt          # Зависимости
+├── train.py                  # Обучение модели
+├── demo.py                   # Консольная демо-версия
+├── src/
+│   └── classifier.py         # Класс PromptClassifier с безопасной логикой
+├── data/
+│   └── dataset_v2.json       # Расширенный датасет (350 примеров)
+├── notebooks/
+│   └── interactive_demo.ipynb  # Интерактивная демо для Colab (создать — см. Шаг 2)
+└── docs/
+    └── *.md                  # Документация на русском
+
+
