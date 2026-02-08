@@ -40,20 +40,6 @@ F1-мера
 Recall для дизлайков
 97.8% ⚠️ КРИТИЧЕСКИ ВАЖНО
 
-LLM-Prompt-Rater/
-├── README.md                 # Этот файл
-├── requirements.txt          # Зависимости
-├── train.py                  # Обучение модели
-├── demo.py                   # Консольная демо-версия
-├── src/
-│   └── classifier.py         # Класс PromptClassifier с безопасной логикой
-├── data/
-│   └── dataset_v2.json       # Расширенный датасет (350 примеров)
-├── notebooks/
-│   └── interactive_demo.ipynb  # Интерактивная демо для Colab (создать — см. Шаг 2)
-└── docs/
-    └── *.md                  # Документация на русском
-
 
 ### Вариант 2: Локальный запуск
 
@@ -71,4 +57,18 @@ python train.py
 # 4. Демонстрация
 python demo.py
 
+Структура проекта:
 
+LLM-Prompt-Rater/
+├── README.md                 # Этот файл
+├── requirements.txt          # Зависимости
+├── train.py                  # Обучение модели
+├── demo.py                   # Консольная демо-версия
+├── src/
+│   └── classifier.py         # Класс PromptClassifier с безопасной логикой
+├── data/
+│   └── dataset_v2.json       # Расширенный датасет (350 примеров)
+├── notebooks/
+│   └── interactive_demo.ipynb  # Интерактивная демо для Colab (создать — см. Шаг 2)
+└── docs/
+    └── *.md                  # Документация на русском
